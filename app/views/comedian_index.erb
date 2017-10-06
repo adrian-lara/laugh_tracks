@@ -1,0 +1,12 @@
+<h1>Comedians</h1>
+
+<h4>Average age: <%= @comedians.avg_age %></h4>
+
+<% @comedians.each do |comedian|%>
+  <p><%= comedian.name %>, <%= comedian.age %></p>
+  <ul>
+    <% comedian.special.each do |sp| %>
+      <li><%= sp.name %></li>
+    <% end %>
+  </ul>
+<% end %>
